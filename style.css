@@ -121,3 +121,15 @@ li {
 	color: black;
 	border-color: blue;
 }
+
+.lev {
+	font-size: 16px;
+}
+
+.tucne {
+	font-weight: 700;
+}
+
+.cervenePismo {
+	color: red;
+}
