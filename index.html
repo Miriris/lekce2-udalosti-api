@@ -1,31 +1,62 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>JavaScript a DOM</title>
-	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Source+Sans+Pro:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
-	<link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>JavaScript a DOM</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700|Source+Sans+Pro:400,400i,700,700i&amp;subset=latin-ext"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 onclick="zmenStyl()">Změna tříd, události</h1>
 
-	<h1 onclick="zmenStyl()">Změna tříd, události</h1>
+    <!--<div onmouseover="priNajetiNaCtverec()" class="ctverecek zluty"></div>
 
-	<div onmouseover="priNajetiNaCtverec()" class="ctverecek zluty"></div>
+    <div class="ctverecek zeleny"></div>
+		-->
 
-	<div class="ctverecek zeleny"></div>
+    <p onmouseover="ztucni()" class="lev">V elipse spí lev.</p>
 
-	<p onmouseover="ztucni()" class="lev">V elipse spí lev.</p>
-		<button onclick="zmenBarvuPisma()">červený po kliknutí</button>
-	
+    <button onclick="zmenBarvuPisma()">červený po kliknutí</button>
 
-	<img class="obrazek" src="obrazky/kocka.jpg">
+    <button onclick="zvetsOPixel()">zvětš o 1 po kliknutí</button>
 
-	<button class="tlacitko">Čudlajs</button>
+    <h1>Audio ovladač</h1>
 
-	<audio src="audio/dingdingdang.mp3" preload="auto"></audio>
+    <audio
+      id="zvukovaStopa"
+      src="audio/dingdingdang.mp3"
+      preload="auto"
+    ></audio>
 
-	<script type="text/javascript" src="main.js"></script>
+    <div clas="ovladac">
+      <button onclick="startAudio()" class="tlacitko">Zapni píseň</button>
 
-</body>
+      <button onclick="pauzniAudio()" class="tlacitko">Pauzni píseň</button>
+
+      <button onclick="ztisAudio()" class="tlacitko">Ztišuji píseň</button>
+
+      <button onclick="normalAudio()" class="tlacitko">
+        Hlasitost průměrná
+      </button>
+
+      <button onclick="maxAudio()" class="tlacitko">Hlasitost maximální</button>
+
+      <button onclick="nastavAudioNaZacatek()" class="tlacitko">
+        Nastav na začátek
+      </button>
+
+      <button onclick="nastavAudioDoprostred()" class="tlacitko">
+        Nastav doprostřed
+      </button>
+
+      <button onclick="nastavAudioNaKonec()" class="tlacitko">
+        Nastav na konec
+      </button>
+    </div>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
 </html>
